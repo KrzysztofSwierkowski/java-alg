@@ -14,9 +14,9 @@ public class Spirala extends Canvas {
 
         if(lg>0){
             gc.drawLine(x,y,x+lg,y);
-            gc.drawLine(x,y,x+lg,y);
-            gc.drawLine(x,y,x+lg,y);
-            gc.drawLine(x,y,x+lg,y);
+            gc.drawLine(x+lg,y,x+lg,y+lg);
+            gc.drawLine(x+lg,y+lg,x+alpha,y+lg);
+            gc.drawLine(x+alpha,y+lg,x+alpha,y+alpha);
             rysujSpirale(lg-2*alpha, x+alpha, y+alpha);
 
         }
@@ -31,7 +31,7 @@ public class Spirala extends Canvas {
 
    public static void main(String[] args) {
        Spirala s=new Spirala();
-JFrame f =new JFrame("spirala");
+JFrame f =new JFrame("Spirala");
 
 f.setLocation(300, 500);
 f.setSize(400,400);
